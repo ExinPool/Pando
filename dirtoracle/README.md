@@ -53,7 +53,7 @@ Add crontab like this in the server.
 
 ``` bash
 # DirtOracle process monitor
-* * * * * cd /data/monitor/exinpool/Mixin/process && bash dirtoracle_process.sh >> dirtoracle_process.log &
+* * * * * cd /data/monitor/exinpool/Pando/dirtoracle && bash dirtoracle_process.sh >> dirtoracle_process.log &
 ```
 
 The crontab will run every minute then you can check the log in the `dirtoracle_process.log`.

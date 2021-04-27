@@ -53,7 +53,7 @@ Add crontab like this in the server.
 
 ``` bash
 # Mixin Pando worker process monitor.
-* * * * * cd /data/monitor/exinpool/Mixin/Pando && bash pando_process.sh >> pando_process.log &
+* * * * * cd /data/monitor/exinpool/Pando/pando && bash pando_process.sh >> pando_process.log &
 ```
 
 The crontab will run every minute then you can check the log in the `pando_process.log`.
