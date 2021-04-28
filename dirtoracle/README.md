@@ -43,7 +43,7 @@ Copy `config.cfg.defaults` to `config.cfg` and change some varibles like this in
 SERVICE=DirtOracle
 PROCESS=7121
 PROCESS_NUM=1
-HOST=pando.exin.one
+HOST=dirtoracle.exin.one
 LOG_FILE=dirtoracle_process.log
 WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
 ACCESS_TOKEN=YOUR_ACCESS_TOKEN
