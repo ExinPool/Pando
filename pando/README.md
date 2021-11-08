@@ -47,13 +47,17 @@ HOST=pando.exin.one
 LOG_FILE=pando_process.log
 WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
 ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
 ```
 
 Add crontab like this in the server.
 
 ``` bash
 # Mixin Pando worker process monitor.
-* * * * * cd /data/monitor/exinpool/Pando/pando && bash pando_process.sh >> pando_process.log &
+*/5 * * * * cd /data/monitor/exinpool/Pando/pando && bash pando_process.sh >> pando_process.log &
+
+# Mixin Pando worker process monitor.
+*/5 * * * * cd /data/monitor/exinpool/Pando/pando && bash pando_process_lark.sh >> pando_process.log &
 ```
 
 The crontab will run every minute then you can check the log in the `pando_process.log`.
@@ -63,6 +67,7 @@ The crontab will run every minute then you can check the log in the `pando_proce
 - Monitor Pando worker process
 - Send alarm message when Pando worker is abnormal
 - Send alarm message via Webhook which based on Mixin API
+- Send alarm message to Lark
 
 ## Contributing
 
