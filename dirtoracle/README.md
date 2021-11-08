@@ -47,6 +47,7 @@ HOST=dirtoracle.exin.one
 LOG_FILE=dirtoracle_process.log
 WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
 ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
 ```
 
 Add crontab like this in the server.
@@ -54,6 +55,9 @@ Add crontab like this in the server.
 ``` bash
 # DirtOracle process monitor
 * * * * * cd /data/monitor/exinpool/Pando/dirtoracle && bash dirtoracle_process.sh >> dirtoracle_process.log &
+
+# DirtOracle process monitor
+* * * * * cd /data/monitor/exinpool/Pando/dirtoracle && bash dirtoracle_process_lark.sh >> dirtoracle_process.log &
 ```
 
 The crontab will run every minute then you can check the log in the `dirtoracle_process.log`.
