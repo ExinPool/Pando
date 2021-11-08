@@ -5,3 +5,4 @@ HOST=dirtoracle.exin.one
 LOG_FILE=dirtoracle_process.log
 WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
 ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
