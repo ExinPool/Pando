@@ -1,6 +1,6 @@
-# HODL Process Monitor
+# OptionDance Process Monitor
 
-> HODL process monitor tools.
+> OptionDance process monitor tools.
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
@@ -40,11 +40,11 @@ Invite Webhook and somebody who want to receive monitor message to a small group
 Copy `config.cfg.defaults` to `config.cfg` and change some varibles like this in the `config.cfg`.
 
 ``` bash
-SERVICE=HODL
-PROCESS=7778
+SERVICE=OptionDance
+PROCESS=6028
 PROCESS_NUM=1
-HOST=hodl.exin.one
-LOG_FILE=hodl_process.log
+HOST=optiondance.exin.one
+LOG_FILE=doptiondance_process.log
 WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
 ACCESS_TOKEN=YOUR_ACCESS_TOKEN
 LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
@@ -53,19 +53,19 @@ LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
 Add crontab like this in the server.
 
 ``` bash
-# HODL process monitor
-*/5 * * * * cd /data/monitor/exinpool/Pando/hodl && bash hodl_process.sh >> hodl_process.log &
+# OptionDance process monitor
+*/5 * * * * cd /data/monitor/exinpool/Pando/optiondance && bash optiondance_process.sh >> optiondance_process.log &
 
-# HODL process monitor
-*/5 * * * * cd /data/monitor/exinpool/Pando/hodl && bash hodl_process_lark.sh >> hodl_process.log &
+# OptionDance process monitor
+*/5 * * * * cd /data/monitor/exinpool/Pando/optiondance && bash optiondance_process_lark.sh >> optiondance_process.log &
 ```
 
-The crontab will run every minute then you can check the log in the `hodl_process.log`.
+The crontab will run every minute then you can check the log in the `optiondance_process.log`.
 
 ## Features
 
-- Monitor HODL process
-- Send alarm message when HODL process is abnormal
+- Monitor OptionDance process
+- Send alarm message when OptionDance process is abnormal
 - Send alarm message via Webhook which based on Mixin API
 - Send alarm message to Lark
 

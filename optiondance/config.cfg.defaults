@@ -1,0 +1,8 @@
+SERVICE=OptionDance
+PROCESS=6028
+PROCESS_NUM=1
+HOST=optiondance.exin.one
+LOG_FILE=doptiondance_process.log
+WEBHOOK_URL=https://webhook.exinwork.com/api/send?access_token
+ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+LARK_WEBHOOK_URL=https://open.larksuite.com/open-apis/bot/v2/hook/
